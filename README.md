@@ -1,24 +1,72 @@
-# README
+# content-share
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DB設計
 
-Things you may want to cover:
+## usersテーブル 
 
-* Ruby version
+| Column   | Type   | Options                  |
+| -------- | ------ | ------------------------ |
+| nickname | string | null: false              |
+| email    | string | null: false, unique: true|
+| password | string | null: false              |
 
-* System dependencies
+### Association
+- has_many :posts
+- has_many :contents
 
-* Configuration
+<br>
 
-* Database creation
+## postsテーブル
 
-* Database initialization
+| Column    | Type       | Options     |
+| --------- | ---------- | ----------- |
+| name      | string     | null: false |
+| published | integer    | null: false |
+| user      | references | null: false, foreign_key: true |
 
-* How to run the test suite
+### Association
+- has_many :contents
+- has_many :tags, through: :post_tags
 
-* Services (job queues, cache servers, search engines, etc.)
+<br>
 
-* Deployment instructions
+## post_tagsテーブル
 
-* ...
+| Column   | Type       | Options     |
+| -------- | ---------- | ----------- |
+| post     | references | null: false, foreign_key: true |
+| tag      | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :post
+- belongs_to :tag
+
+<br>
+
+## tagsテーブル
+
+| Column   | Type        | Options                        |
+| -------- | ----------- | ------------------------------ |
+| name     | string      | null: false                    |
+| post     | references  | null: false, foreign_key: true |
+
+### Association
+- has_many :post, through: :post_tags
+
+<br>
+
+## contentsテーブル
+| Column     | Type        | Options                        |
+| ---------- | ----------- | ------------------------------ |
+| comment    | text        | 			                    |
+| image      | string	   |
+| user       | references  | null: false, foreign_key: true |
+| post       | references  | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :post
+
+<br>
+
+
