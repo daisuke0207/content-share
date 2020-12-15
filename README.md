@@ -12,17 +12,19 @@
 
 ### Association
 - has_many :posts
-- has_many :contents
+- has_many :comments
+- has_many :replies
 
 <br>
 
 ## postsテーブル
 
-| Column    | Type       | Options     |
-| --------- | ---------- | ----------- |
-| name      | string     | null: false |
-| published | integer    | null: false |
-| user      | references | null: false, foreign_key: true |
+| Column     | Type       | Options     |
+| ---------- | ---------- | ----------- |
+| title      | string     | null: false |
+| body       | text       | null: false |
+| is_publish | boolean    | null: false |
+| user       | references | null: false, foreign_key: true |
 
 ### Association
 - has_many :contents
@@ -55,11 +57,10 @@
 
 <br>
 
-## contentsテーブル
+## commentsテーブル
 | Column     | Type        | Options                        |
 | ---------- | ----------- | ------------------------------ |
-| comment    | text        | 			                    |
-| image      | string	   |
+| body       | text        | 			                    |
 | user       | references  | null: false, foreign_key: true |
 | post       | references  | null: false, foreign_key: true |
 
@@ -68,5 +69,17 @@
 - belongs_to :post
 
 <br>
+
+## repliesテーブル
+| Column         | Type        | Options                        |
+| -------------- | ----------- | ------------------------------ |
+| body           | text        | null: false	                |
+| user           | references  | null: false, foreign_key: true |
+| comment_parent | references  | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :comment
+
 
 
