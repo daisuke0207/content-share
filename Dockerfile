@@ -6,7 +6,7 @@ RUN apt-get install -y \
 	nodejs \
 	postgresql-client \
 	yarn
-
+RUN gem install sass
 WORKDIR /content-share
 COPY Gemfile Gemfile.lock /content-share/
 RUN bundle install
