@@ -1,9 +1,11 @@
 .new_post {
   margin: 50px auto 50px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .new_post_form {
-  height: 100vh;
+  height: 80%;
   display: grid;
   grid-template-rows: 50px 1fr 50px 50px;
   row-gap: 30px;
@@ -11,11 +13,11 @@
 }
 
 .new_post_title {
-  width: 800px;
+  width: min(60vw, 800px);
 }
 
 .new_post_body {
-  width: 800px;
+  width: min(60vw, 800px);
 }
 
 .publish_check_wrap {

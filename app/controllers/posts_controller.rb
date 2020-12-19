@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @item.save
+    if @post.save
       redirect_to root_path
     else
       render :new
