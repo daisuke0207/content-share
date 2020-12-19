@@ -1,0 +1,47 @@
+.new_post {
+  margin: 50px auto 50px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.new_post_form {
+  height: 80%;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px 50px;
+  row-gap: 30px;
+  justify-items: center;
+}
+
+.new_post_title {
+  width: min(60vw, 800px);
+}
+
+.new_post_body {
+  width: min(60vw, 800px);
+}
+
+.publish_check_wrap {
+  display: flex;
+}
+
+.is_publish_label {
+  align-self: center;
+  font-size: 18px;
+}
+
+.publish_check_box {
+  align-self: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+}
+
+.new_post_submit {
+  width: 100px;
+}
+
+.mv_form {
+  margin-top: 30px;
+  display: grid;
+  justify-content: center;
+}
