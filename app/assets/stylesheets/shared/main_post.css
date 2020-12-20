@@ -2,6 +2,12 @@
   grid-area: main_post;
 }
 
+.main_post_wrap {
+  margin: 100px auto;
+  width: 80%;
+  height: 80%;
+}
+
 .post_lists {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -20,10 +26,19 @@
   cursor: pointer;
 }
 
+.post_user_name {
+  font-size: 16px;
+  opacity: 0.5;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  padding: 3px 10px;
+}
+
 .post_title {
-  font-size: 24px;
+  font-size: 22px;
+  padding: 5px 10px;
 }
 
 .post_body {
-  
+  font-size: 14px;
+  padding: 5px 10px;
 }

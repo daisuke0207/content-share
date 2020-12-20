@@ -1,10 +1,15 @@
-<main class="main_post"> 
-  <div class="post_lists">
-    <% @posts.each do |post| %>
-      <ul class="post">
-        <li class="post_title"><%= post.title %></li>
-        <li class="post_body"><%= post.body %></li>
-      </ul>
-    <% end %>
+<main class="main_post">
+  <div class="main_post_wrap">
+    <div class="post_lists">
+      <% @posts.each do |post| %>
+        <% if post.is_publish %>
+          <ul class="post">
+            <li class="post_user_name"><%= post.user.nickname %></li>
+            <li class="post_title"><%= post.title %></li>
+            <li class="post_body"><%= post.body %></li>
+          </ul>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </main>
