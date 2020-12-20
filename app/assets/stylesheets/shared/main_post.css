@@ -26,19 +26,30 @@
   cursor: pointer;
 }
 
+.post_user_show {
+  text-decoration: none;
+}
+
 .post_user_name {
   font-size: 16px;
   opacity: 0.5;
   border-bottom: 1px solid rgb(200, 200, 200);
   padding: 3px 10px;
+  color: black;
+}
+
+.post_show {
+  text-decoration: none;
 }
 
 .post_title {
   font-size: 22px;
   padding: 5px 10px;
+  color: black;
 }
 
 .post_body {
   font-size: 14px;
   padding: 5px 10px;
+  color: black;
 }
