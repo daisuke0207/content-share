@@ -1,3 +1,7 @@
+.main_post {
+  grid-area: main_post;
+}
+
 .post_lists {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

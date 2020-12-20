@@ -1,25 +1,12 @@
 /* Top page layout */
 
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template:
     "post_header post_header" 64px
     "side_bar main_post" 1fr
     / 200px 1fr;
-}
-
-.post_header {
-  grid-area: post_header;
-  position: fixed;
-}
-
-.side_bar {
-  grid-area: side_bar;
-}
-
-.main_post {
-  grid-area: main_post;
 }
 
 @media screen and (max-width: 1000px) {

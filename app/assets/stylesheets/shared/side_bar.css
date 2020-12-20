@@ -1,3 +1,7 @@
+.side_bar {
+  grid-area: side_bar;
+}
+
 .side_menu_lists li {
   background-color: rgb(255, 255, 255);
   display: flex;
