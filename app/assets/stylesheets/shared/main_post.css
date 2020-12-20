@@ -1,0 +1,44 @@
+.main_post {
+  grid-area: main_post;
+}
+
+.main_post_wrap {
+  margin: 100px auto;
+  width: 80%;
+  height: 80%;
+}
+
+.post_lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+}
+
+.post {
+  background-color: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.post:hover {
+  border: 1px solid #6c6c6c;
+  cursor: pointer;
+}
+
+.post_user_name {
+  font-size: 16px;
+  opacity: 0.5;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  padding: 3px 10px;
+}
+
+.post_title {
+  font-size: 22px;
+  padding: 5px 10px;
+}
+
+.post_body {
+  font-size: 14px;
+  padding: 5px 10px;
+}

@@ -1,0 +1,15 @@
+<header class="post_header">
+  <nav class="header_nav">
+    <%= image_tag 'hamburger-menu.svg', class: "hamburger_menu" %>
+    <%= link_to "Share", root_path, class: "home_title" %>
+    <ul class="user_status_nav">
+      <% if user_signed_in? %>
+        <li class="user_status user_name"><%= current_user.nickname %></li>
+        <li class="user_status logout"><%= link_to 'ログアウト', destroy_user_session_path,  method: :delete %></li>
+      <% else %>
+        <li class="user_status sign_up"><%= link_to '新規登録', new_user_registration_path %></li>
+        <li class="user_status login"><%= link_to 'ログイン', new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
