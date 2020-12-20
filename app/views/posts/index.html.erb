@@ -1,4 +1,11 @@
-<%= render "shared/header" %>
-
-<%= render "shared/side_bar" %>
-<%= render "shared/main_post" %>
+<div class="wrapper">
+  <header class="post_header">
+    <%= render "shared/header" %>
+  </header>
+  <aside class="side_bar">
+    <%= render "shared/side_bar" %>
+  </aside>
+  <main class="main_post">
+    <%= render "shared/main_post", class: "main_post" %>
+  </main>
+</div>
