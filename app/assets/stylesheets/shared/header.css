@@ -1,0 +1,8 @@
+.header_nav {
+  display: flex;
+}
+
+.user_status_nav {
+  display: flex;
+  justify-content: end;
+}

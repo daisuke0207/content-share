@@ -1,1 +1,10 @@
 <%= link_to '新しい投稿', new_post_path, class: "new_post_btn" %>
+
+<div class="post_lists">
+  <% @posts.each do |post| %>
+    <ul class="post">
+      <li class="post_title"><%= post.title %></li>
+      <li class="post_body"><%= post.body %></li>
+    </ul>
+  <% end %>
+</div>

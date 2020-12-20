@@ -1,0 +1,11 @@
+.side_menu_lists li {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.side_menu_lists li:hover {
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
+}
