@@ -1,15 +1,44 @@
 .side_bar {
   grid-area: side_bar;
+  border-right: 0.5px solid rgba(230, 230, 230);
 }
 
-.side_menu_lists li {
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  align-items: center;
+.new_post_btn {
+  display: block;
   text-decoration: none;
+  padding: 10px;
+  color: rgb(255, 166, 0);
+  background-color: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  margin: 30px 0 10px 30px;
 }
 
-.side_menu_lists li:hover {
+.side_menu_lists {
+  display: flex;
+  flex-direction: column;
+}
+
+.side_menu_lists a {
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  list-style: none;
+  padding: 15px 0 15px 50px;
+}
+
+.side_menu_lists a:hover {
   background-color: rgb(231, 231, 231);
   cursor: pointer;
+}
+
+.all_post_page {
+  text-decoration: none;
+  color: #263238;
+}
+
+.my_post_page {
+  text-decoration: none;
+  color: #263238;
 }

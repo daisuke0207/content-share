@@ -6,7 +6,7 @@
   grid-template:
     "post_header post_header" 64px
     "side_bar main_post" 1fr
-    / 200px 1fr;
+    / 250px 1fr;
 }
 
 @media screen and (max-width: 1000px) {

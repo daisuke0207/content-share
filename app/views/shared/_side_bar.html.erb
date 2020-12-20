@@ -1,7 +1,8 @@
 <aside class="side_bar">
-  <ul class="side_menu_lists">
-    <li>リスト1</li>
-    <li>リスト2</li>
-    <li>リスト3</li>
-  <ul>
+  <%= link_to '投稿する', new_post_path, class: "new_post_btn" %>
+
+  <div class="side_menu_lists">
+    <%= link_to "ホーム", root_path, class: "all_post_page" %>
+    <%= link_to "投稿", root_path, class: "my_post_page" %>
+  <div>
 </aside>

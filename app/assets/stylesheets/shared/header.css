@@ -1,7 +1,7 @@
 .post_header {
   grid-area: post_header;
   display: flex;
-  border-bottom: 1px solid rgba(227, 227, 227, 0.641);
+  border-bottom: 0.5px solid rgba(230, 230, 230);
 }
 
 .header_nav {
@@ -39,7 +39,7 @@
 
 .user_status a {
   text-decoration: none;
-  color: rgb(38, 38, 38);
+  color: #263238;
 }
 
 .user_name {
