@@ -2,11 +2,15 @@
   <div class="main_post_wrap">
     <div class="post_lists">
       <% @posts.each do |post| %>
-        <% if post.is_publish %>
+        <% if !post.is_publish %>
           <ul class="post">
-            <li class="post_user_name"><%= post.user.nickname %></li>
-            <li class="post_title"><%= post.title %></li>
-            <li class="post_body"><%= post.body %></li>
+            <%= link_to user_path(post.user), class:'post_user_show' do %>
+              <li class="post_user_name"><%= post.user.nickname %></li>
+            <% end %>
+            <%= link_to post_path(post), class: 'post_show' do %>
+              <li class="post_title"><%= post.title %></li>
+              <li class="post_body"><%= post.body %></li>
+            <% end %>
           </ul>
         <% end %>
       <% end %>
