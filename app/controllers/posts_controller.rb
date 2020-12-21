@@ -3,12 +3,12 @@ class PostsController < ApplicationController
   before_action :move_to_session, only: [:new]
 
   def index
-    @posts = Post.includes(:user).order('created_at DESC')
+    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC')
   end
 
   def show
     @post = Post.find(params[:id])
-    @posts = Post.includes(:user).order('created_at DESC')
+    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC')
   end
 
   def new
