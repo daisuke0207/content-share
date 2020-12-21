@@ -39,9 +39,3 @@
 .new_post_submit {
   width: 100px;
 }
-
-.mv_form {
-  margin-top: 30px;
-  display: grid;
-  justify-content: center;
-}
