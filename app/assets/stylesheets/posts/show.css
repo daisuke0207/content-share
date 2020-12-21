@@ -1,0 +1,38 @@
+.post_show_wrap {
+  width: 100%;
+  height: calc(100vh - 48px);
+}
+
+.post_show_box {
+  display: grid;
+  grid-template-columns: min(700px, 70vw);
+  justify-content: center;
+}
+
+.post_show {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+}
+
+.post_user_show {
+  font-size: 16px;
+  opacity: 0.5;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  padding: 3px 10px;
+  color: black;
+}
+
+.post_title_show {
+  font-size: 22px;
+  padding: 5px 10px;
+  color: black;
+}
+
+.post_body_show {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: black;
+}
