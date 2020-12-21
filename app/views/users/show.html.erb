@@ -1,2 +1,19 @@
 <%= render 'shared/header' %>
-Post User Show
+<%= "#{@user.nickname}さんの投稿" %>
+<div class="main_post_wrap">
+  <div class="post_lists">
+    <% @posts.each do |post| %>
+      <% if post.is_publish %>
+        <ul class="post">
+          <%= link_to user_path(post.user), class:'post_user_link' do %>
+            <li class="post_user_name"><%= post.user.nickname %></li>
+          <% end %>
+          <%= link_to post_path(post), class: 'post_show_link' do %>
+            <li class="post_title"><%= post.title %></li>
+            <li class="post_body"><%= post.body %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -2,7 +2,7 @@
   <div class="main_post_wrap">
     <div class="post_lists">
       <% @posts.each do |post| %>
-        <% if !post.is_publish %>
+        <% if post.is_publish %>
           <ul class="post">
             <%= link_to user_path(post.user), class:'post_user_link' do %>
               <li class="post_user_name"><%= post.user.nickname %></li>
