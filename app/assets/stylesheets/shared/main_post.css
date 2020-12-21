@@ -4,14 +4,14 @@
 
 .main_post_wrap {
   margin: 100px auto;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
 }
 
 .post_lists {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 30px;
+  column-gap: 30px;;
 }
 
 .post {
@@ -26,19 +26,42 @@
   cursor: pointer;
 }
 
+.post_user_link {
+  text-decoration: none;
+}
+
 .post_user_name {
   font-size: 16px;
   opacity: 0.5;
   border-bottom: 1px solid rgb(200, 200, 200);
   padding: 3px 10px;
+  color: black;
+}
+
+.post_show_link {
+  text-decoration: none;
 }
 
 .post_title {
   font-size: 22px;
   padding: 5px 10px;
+  color: black;
 }
 
 .post_body {
   font-size: 14px;
   padding: 5px 10px;
+  color: black;
+}
+
+@media screen and (max-width: 1200px) {
+  .post_lists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .post_lists {
+    grid-template-columns: 1fr;
+  }
 }
