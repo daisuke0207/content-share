@@ -7,8 +7,8 @@
             <li class="post_user_name"><%= post.user.nickname %></li>
           <% end %>
           <%= link_to post_path(post), class: 'post_show_link' do %>
-            <li class="post_title"><%= post.title %></li>
-            <li class="post_body"><%= post.body %></li>
+            <li class="post_title"><%= post.title.truncate(35) %></li>
+            <li class="post_body"><%= post.body.truncate(300) %></li>
           <% end %>
         </ul>
       <% end %>
