@@ -4,8 +4,8 @@
 
 .main_post_wrap {
   margin: 100px auto;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
 }
 
 .post_lists {
@@ -52,4 +52,16 @@
   font-size: 14px;
   padding: 5px 10px;
   color: black;
+}
+
+@media screen and (max-width: 1200px) {
+  .post_lists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .post_lists {
+    grid-template-columns: 1fr;
+  }
 }
