@@ -37,6 +37,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def my_post
+    @posts = current_user.posts
+  end
+
   private
 
   def post_params
