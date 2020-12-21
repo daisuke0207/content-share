@@ -1,0 +1,13 @@
+<%= render 'shared/header' %>
+
+<div class="new_post">
+  <%= form_with model: @post, class: "new_post_form", local: true do |f| %>
+    <%= f.text_field :title, class: "new_post_title", placeholder: "タイトル", maxlength:"200" %>
+    <%= f.text_area :body, class: "new_post_body" %>
+    <div class="publish_check_wrap">
+      <%= f.label :is_publish , "公開", class: "is_publish_label" %>
+      <%= f.check_box :is_publish, checked_value: true, unchecked_value: false, class: "publish_check_box" %>
+    </div>
+    <%= f.submit "更新", class: "new_post_submit" %>
+  <% end %>
+</div>

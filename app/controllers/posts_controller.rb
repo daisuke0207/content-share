@@ -24,6 +24,20 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    redirect_to root_path unless current_user.id == @post.user_id
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to my_post_users_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def post_params
