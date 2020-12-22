@@ -11,7 +11,8 @@
 .post_lists {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 30px;;
+  column-gap: 30px;
+  row-gap: 60px;
 }
 
 .post {
@@ -57,6 +58,7 @@
 @media screen and (max-width: 1200px) {
   .post_lists {
     grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
   }
 }
 
