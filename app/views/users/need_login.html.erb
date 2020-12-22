@@ -1,0 +1,7 @@
+<%= render "shared/header" %>
+
+<div class="need_login_wrap">
+  <p class="need_login_text">ログインが必要です</p>
+  <%= link_to '新規投稿', new_user_registration_path, class: "need_sign_up" %>
+  <%= link_to 'ログイン', new_user_session_path, class: "need_login" %>
+</div>

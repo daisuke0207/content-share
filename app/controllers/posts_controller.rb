@@ -55,6 +55,6 @@ class PostsController < ApplicationController
   end
 
   def move_to_session
-    redirect_to new_user_session_path unless user_signed_in?
+    redirect_to need_login_users_path unless user_signed_in?
   end
 end
