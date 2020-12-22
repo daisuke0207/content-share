@@ -10,6 +10,10 @@ class UsersController < ApplicationController
 
   def my_post; end
 
+  def need_login
+    
+  end
+
   private
 
   def move_to_session
