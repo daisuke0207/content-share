@@ -16,6 +16,7 @@
             <div class="my_post_nav">
               <%= link_to '編集', edit_post_path(post), class:"post_edit_link" %>
               <%= link_to '詳細', post_path(post), class:"post_show_link" %>
+              <%= link_to '削除', post_path(post), method: :delete %>
               <% if post.is_publish %>
                 <span class="publish_status_str">公開</span>
               <% else %>
