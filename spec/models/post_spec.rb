@@ -31,7 +31,7 @@ RSpec.describe Post, type: :model do
     it 'is_publish(公開設定)がtrueかfalseでなければ投稿できないこと' do
       @post.is_publish = nil
       @post.valid?
-      expect(@post.errors.full_messages).to include("Is publish is not included in the list")
+      expect(@post.errors.full_messages).to include('Is publish is not included in the list')
     end
 
     it 'userログイン状態でないと登録できないこと' do

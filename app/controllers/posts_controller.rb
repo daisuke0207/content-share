@@ -1,6 +1,7 @@
 # frozen_string_literal: true
+
 class PostsController < ApplicationController
-  before_action :move_to_session, only: [:new, :edit]
+  before_action :move_to_session, only: %i[new edit]
 
   def index
     @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC')

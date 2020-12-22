@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :move_to_session, only: [:my_post]
 
@@ -6,9 +8,7 @@ class UsersController < ApplicationController
     @posts = @user.posts.where(is_publish: true).order('created_at DESC')
   end
 
-  def my_post
-
-  end
+  def my_post; end
 
   private
 
