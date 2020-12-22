@@ -38,6 +38,15 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    if post.destroy
+      redirect_to my_post_users_path
+    else
+      render :my_post
+    end
+  end
+
   private
 
   def post_params
