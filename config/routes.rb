@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: :show do
     collection do
       get 'my_post'
+      get 'need_login'
     end
   end
 end
