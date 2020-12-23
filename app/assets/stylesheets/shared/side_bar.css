@@ -42,3 +42,39 @@
   text-decoration: none;
   color: #263238;
 }
+
+@media screen and (max-width: 1000px) {
+  .side_bar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    border-top: 1px solid rgb(225, 225, 225);
+  }
+
+  .side_bar_wrap {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .new_post_btn {
+    margin: 10px 0 50px 30px;
+    width: 100px;
+  }
+
+  .side_menu_lists {
+    flex-direction: row;
+  }
+
+  .side_menu_lists a{
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    margin: 10px 0 50px 30px;
+  }
+}

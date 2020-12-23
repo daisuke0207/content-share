@@ -1,8 +1,10 @@
 <aside class="side_bar">
-  <%= link_to '投稿する', new_post_path, class: "new_post_btn" %>
+  <div class="side_bar_wrap">
+    <%= link_to '投稿する', new_post_path, class: "new_post_btn" %>
 
-  <div class="side_menu_lists">
-    <%= link_to "ホーム", root_path, class: "all_post_page" %>
-    <%= link_to "投稿", my_post_users_path, class: "my_post_page" %>
-  <div>
+    <div class="side_menu_lists">
+      <%= link_to "ホーム", root_path, class: "all_post_page" %>
+      <%= link_to "投稿", my_post_users_path, class: "my_post_page" %>
+    <div>
+  </div>
 </aside>
