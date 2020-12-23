@@ -4,7 +4,6 @@
   <main class="main_post">
     <div class="main_post_wrap">
       <div class="post_lists">
-        <%= render partial: "shared/post_index", locals: {resources: current_user.posts} %>
         <% current_user.posts.each do |post| %>
           <ul class="post">
             <%= link_to user_path(post.user), class:'post_user_link' do %>
