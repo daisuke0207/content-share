@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC')
+    @comment = Comment.new
   end
 
   def new

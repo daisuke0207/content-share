@@ -9,6 +9,20 @@
           <li class="post_title_show"><%= @post.title %></li>
           <li class="post_body_show"><%= @post.body %></li>
         </ul>
+        <div class="comment_wrap">
+          <%# コメント投稿フォーム %>
+          <%= form_with model: [@post, @comment], class:"comment_form" , local: true do |f| %>
+            <%= f.text_area :body, class:"comment_area" %>
+            <%= f.submit "コメント", class:"comment_submit" %>
+          <% end %>
+
+          <%# コメント一覧表示 %>
+          <div class="comment_lists">
+            <% @post.comments.each do |comment| %>
+              <li class="comment"><%= comment.body %></li>
+            <% end %>
+          </div>
+        </div>
       </div>
 
       <div class="main_post_wrap">

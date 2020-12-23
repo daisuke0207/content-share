@@ -1,5 +1,6 @@
 .main_post {
   grid-area: main_post;
+  overflow: scroll;
 }
 
 .main_post_wrap {
