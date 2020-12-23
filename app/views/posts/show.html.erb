@@ -12,7 +12,7 @@
         <div class="comment_wrap">
           <%# コメント投稿フォーム %>
           <%= form_with model: [@post, @comment], class:"comment_form" , local: true do |f| %>
-            <%= f.text_area :body, class:"comment_area" %>
+            <%= f.text_area :body, class:"comment_area", required: true %>
             <%= f.submit "コメント", class:"comment_submit" %>
           <% end %>
 
