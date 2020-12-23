@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
@@ -19,13 +21,13 @@ RSpec.describe Comment, type: :model do
     it 'ユーザーが空だと投稿できなこと' do
       @comment.user = nil
       @comment.valid?
-      expect(@comment.errors.full_messages).to include("User must exist")
+      expect(@comment.errors.full_messages).to include('User must exist')
     end
 
     it '投稿が空だと投稿できなこと' do
       @comment.post = nil
       @comment.valid?
-      expect(@comment.errors.full_messages).to include("Post must exist")
+      expect(@comment.errors.full_messages).to include('Post must exist')
     end
   end
 end
