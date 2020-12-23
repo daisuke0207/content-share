@@ -18,8 +18,8 @@
 
           <%# コメント一覧表示 %>
           <div class="comment_lists">
-            <% @post.comments.each do |comment| %>
-              <li class="comment"><%= comment.body %></li>
+            <% @post.comments.each_with_index do |comment, i| %>
+              <li class="comment"><%= "#{i+1}. #{comment.body}" %></li>
             <% end %>
           </div>
         </div>
