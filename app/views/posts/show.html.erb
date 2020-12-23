@@ -1,28 +1,33 @@
-<%= render 'shared/header' %>
-<div class="post_show_wrap">
-  <div class="post_show_box">
-    <ul class="post_show">
-      <li class="post_user_show"><%= @post.user.nickname %></li>
-      <li class="post_title_show"><%= @post.title %></li>
-      <li class="post_body_show"><%= @post.body %></li>
-    </ul>
-  </div>
+<div class="wrapper">
+  <%= render 'shared/header' %>
+  <%= render "shared/side_bar" %>
+  <main class="main_post">
+    <div class="post_show_wrap">
+      <div class="post_show_box">
+        <ul class="post_show">
+          <li class="post_user_show"><%= @post.user.nickname %></li>
+          <li class="post_title_show"><%= @post.title %></li>
+          <li class="post_body_show"><%= @post.body %></li>
+        </ul>
+      </div>
 
-  <div class="main_post_wrap">
-    <div class="post_lists">
-      <% @posts.each do |post| %>
-        <% if !post.is_publish %>
-          <ul class="post">
-            <%= link_to user_path(post.user), class:'post_user_link' do %>
-              <li class="post_user_name"><%= post.user.nickname %></li>
+      <div class="main_post_wrap">
+        <div class="post_lists">
+          <% @posts.each do |post| %>
+            <% if post.is_publish %>
+              <ul class="post">
+                <%= link_to user_path(post.user), class:'post_user_link' do %>
+                  <li class="post_user_name"><%= post.user.nickname %></li>
+                <% end %>
+                <%= link_to post_path(post), class: 'post_show_link' do %>
+                  <li class="post_title"><%= post.title %></li>
+                  <li class="post_body"><%= post.body %></li>
+                <% end %>
+              </ul>
             <% end %>
-            <%= link_to post_path(post), class: 'post_show_link' do %>
-              <li class="post_title"><%= post.title %></li>
-              <li class="post_body"><%= post.body %></li>
-            <% end %>
-          </ul>
-        <% end %>
-      <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
 </div>
