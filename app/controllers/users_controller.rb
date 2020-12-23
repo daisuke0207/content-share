@@ -10,9 +10,7 @@ class UsersController < ApplicationController
 
   def my_post; end
 
-  def need_login
-    
-  end
+  def need_login; end
 
   private
 
