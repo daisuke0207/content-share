@@ -47,13 +47,13 @@
 }
 
 .post_title {
-  font-size: 22px;
+  font-size: 18px;
   padding: 5px 10px;
   color: black;
 }
 
 .post_body {
-  font-size: 14px;
+  font-size: 1rem;
   padding: 5px 10px;
   color: black;
 }
