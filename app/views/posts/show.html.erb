@@ -9,7 +9,7 @@
           <li class="post_title_show"><%= @post.title %></li>
           <li class="post_body_show"><%= @post.body %></li>
         </ul>
-        <div class="comment_wrap">
+        <div class="comment_view_wrap">
           <%# コメント投稿フォーム %>
           <%= form_with model: [@post, @comment], class:"comment_form" , local: true do |f| %>
             <%= f.text_area :body, class:"comment_area", required: true %>
@@ -19,7 +19,11 @@
           <%# コメント一覧表示 %>
           <div class="comment_lists">
             <% @post.comments.each_with_index do |comment, i| %>
-              <li class="comment"><%= "#{i+1}. #{comment.body}" %></li>
+              <div class="comment_wrap">
+                <li class="comment_user_name"><%= "#{i+1}. #{comment.user.nickname} :" %></li>
+                <li class="comment"><%= "#{comment.body}" %></li>
+                <li><%= link_to "削除", post_comment_path(comment.post, comment.id), method: :delete, class:"comment_delete" %></li>
+              </div>
             <% end %>
           </div>
         </div>

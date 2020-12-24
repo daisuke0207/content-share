@@ -36,7 +36,7 @@
   color: black;
 }
 
-.comment_wrap {
+.comment_view_wrap {
   display: grid;
   grid-template-columns: min(700px, 70vw);
   grid-template-rows: 50px 500px;
@@ -61,8 +61,25 @@
   border: 1px solid  #cfd8dc;
 }
 
+.comment_wrap {
+  list-style: none;
+  display: flex;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+  padding: 10px 0;
+  position: relative;
+}
+
+.comment_user_name {
+  opacity: 0.7;
+  padding: 0 10px;
+}
+
 .comment {
   height: 100%;
-  width: 100%;
-  list-style: none;
+  width: 1fr;
+}
+
+.comment_delete {
+  position: absolute;
+  right: 5px;
 }

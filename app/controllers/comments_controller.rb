@@ -14,7 +14,8 @@ class CommentsController < ApplicationController
 
   def destroy
     post = Post.find(params[:post_id])
-    if post.destroy
+    comment = Comment.find(params[:id])
+    if comment.destroy
       redirect_to post_path(post)
     else
       @post = post
