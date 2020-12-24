@@ -1,4 +1,18 @@
-# content-share
+# Share
+
+## DEMO
+
+### トップページ
+![share_top_page](https://user-images.githubusercontent.com/61821997/103079009-699c2e00-4616-11eb-9b76-d2712fb3de80.gif)
+<br>
+
+### 投稿詳細ページ、コメント送信・削除機能
+![share_show_comment](https://user-images.githubusercontent.com/61821997/103078747-db27ac80-4615-11eb-862a-2379dc94a709.gif)
+<br>
+
+### 新規投稿ページ
+![share_new_post](https://user-images.githubusercontent.com/61821997/103078762-e11d8d80-4615-11eb-8c89-b6f44c0713d6.gif)
+<br>
 
 # DB設計
 
