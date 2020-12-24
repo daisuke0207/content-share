@@ -2,7 +2,7 @@
   <%= render 'shared/header' %>
   <%= render "shared/side_bar" %>
   <main class="main_post">
-    <%= "#{@user.nickname}さんの投稿" %>
+    <p class="user_profile_text"><%= "#{@user.nickname}さんの投稿" %></p>
     <div class="main_post_wrap">
       <div class="post_lists">
         <% @posts.each do |post| %>

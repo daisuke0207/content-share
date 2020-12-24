@@ -1,9 +1,28 @@
+.my_post_text {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 22px;
+}
+
 .my_post_nav {
+  position: relative;
+  display: flex;
 }
 
 .post_edit_link {
+  margin-left: 3px;
+  margin-right: 5px;
+}
+
+.post_show_link {
+  margin-right: 5px;
 }
 
 .publish_status_str {
+  margin-right: 5px;
 
+}
+
+.post_delete_link {
+  margin-right: 5px;
 }

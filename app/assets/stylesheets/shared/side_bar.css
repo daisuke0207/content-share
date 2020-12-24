@@ -56,12 +56,12 @@
   .side_bar_wrap {
     height: 100%;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 
   .new_post_btn {
-    margin: 10px 0 50px 30px;
-    width: 100px;
+    margin:  10px auto 50px;
+    width: clamp(100px, 20vw, 200px);
   }
 
   .side_menu_lists {
@@ -73,8 +73,9 @@
     background-color: #fff;
     border: 1px solid #cfd8dc;
     border-radius: 10px;
-    width: 100px;
+    width: clamp(100px, 20vw, 200px);
     text-align: center;
-    margin: 10px 0 50px 30px;
+    margin:  10px auto 50px;
+
   }
 }
