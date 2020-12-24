@@ -12,6 +12,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    post = Post.find(params[:post_id])
+    if post.destroy
+      redirect_to post_path(post)
+    else
+      @post = post
+      render "/posts/#{@post.id}"
+    end
+  end
+
   private
 
   def comment_params
