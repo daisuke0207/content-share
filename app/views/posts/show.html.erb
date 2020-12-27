@@ -8,6 +8,7 @@
           <li class="post_user_show"><%= @post.user.nickname %></li>
           <li class="post_title_show"><%= @post.title %></li>
           <li class="post_body_show"><%= @post.body %></li>
+          <li><%= render partial: "tag_list", locals: { tag_list: @post.tag_list } %></li>
         </ul>
         <div class="comment_view_wrap">
           <%# コメント投稿フォーム %>
