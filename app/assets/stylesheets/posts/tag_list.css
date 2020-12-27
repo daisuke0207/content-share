@@ -1,0 +1,10 @@
+.post_tag_list {
+  margin: 10px 10px 5px;
+}
+
+.post_tag_list span{
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: blue;
+  color: white;
+}
