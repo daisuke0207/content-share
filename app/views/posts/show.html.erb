@@ -22,7 +22,7 @@
               <div class="comment_wrap">
                 <li class="comment_user_name"><%= "#{i+1}. #{comment.user.nickname} :" %></li>
                 <li class="comment"><%= "#{comment.body}" %></li>
-                <% if current_user.id == comment.user_id %>
+                <% if user_signed_in? && current_user.id == comment.user_id %>
                   <li><%= link_to "削除", post_comment_path(comment.post, comment.id), method: :delete, class:"comment_delete" %></li>
                 <% end %>
               </div>
