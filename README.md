@@ -4,15 +4,21 @@
 
 ### トップページ
 ![share_top_page](https://user-images.githubusercontent.com/61821997/103080538-65254480-4619-11eb-8da6-cc0c2069b576.gif)
+
 <br>
 
 ### 投稿詳細ページ、コメント送信・削除機能
 ![share_show_comment](https://user-images.githubusercontent.com/61821997/103080533-63f41780-4619-11eb-9db0-a11b36d6e50d.gif)
+
 <br>
 
 ### 新規投稿ページ
 ![share_new_post](https://user-images.githubusercontent.com/61821997/103078762-e11d8d80-4615-11eb-8c89-b6f44c0713d6.gif)
+
 <br>
+
+### タグ付機能
+<img width="1425" alt="スクリーンショット 2020-12-27 13 27 10" src="https://user-images.githubusercontent.com/61821997/103163916-af8c0880-4847-11eb-80e7-fcea6f147f86.png">
 
 # DB設計
 
