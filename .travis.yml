@@ -3,7 +3,6 @@ sudo: required
 services: docker
 
 before_install:
-  - "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker-compose up --build -d
 
 script:
