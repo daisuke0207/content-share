@@ -52,7 +52,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :is_publish).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :body, :is_publish, :tag_list).merge(user_id: current_user.id)
   end
 
   def move_to_session
