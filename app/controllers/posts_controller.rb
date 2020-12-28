@@ -4,12 +4,12 @@ class PostsController < ApplicationController
   before_action :move_to_session, only: %i[new edit]
 
   def index
-    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC')
+    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC').page(params[:page]).per(30)
   end
 
   def show
     @post = Post.find(params[:id])
-    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC')
+    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC').page(params[:page]).per(15)
     @comment = Comment.new
   end
 
