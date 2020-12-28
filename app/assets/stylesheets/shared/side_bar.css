@@ -1,6 +1,7 @@
 .side_bar {
   grid-area: side_bar;
   border-right: 0.5px solid rgba(230, 230, 230);
+  overflow: scroll;
 }
 
 .new_post_btn {

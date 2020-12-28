@@ -5,7 +5,7 @@
   display: grid;
   grid-template:
     "post_header post_header" 64px
-    "side_bar main_post" 1fr
+    "side_bar main_post" calc(100vh - 64px)
     / 250px 1fr;
 }
 
