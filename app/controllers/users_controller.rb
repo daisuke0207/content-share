@@ -5,10 +5,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.where(is_publish: true).order('created_at DESC')
+    @posts = @user.posts.where(is_publish: true).order('created_at DESC').page(params[:page]).per(30)
   end
 
-  def my_post; end
+  def my_post
+    @posts = current_user.posts.order('created_at DESC').page(params[:page]).per(30)
+  end
 
   def need_login; end
 

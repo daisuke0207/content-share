@@ -5,7 +5,7 @@
     <p class="my_post_text">あなたの投稿</p>
     <div class="main_post_wrap">
       <div class="post_lists">
-        <% current_user.posts.each do |post| %>
+        <% @posts.each do |post| %>
           <ul class="post">
             <%= link_to user_path(post.user), class:'post_user_link' do %>
               <li class="post_user_name"><%= post.user.nickname %></li>
@@ -28,5 +28,7 @@
         <% end %>
       </div>
     </div>
+      <%= link_to_prev_page @posts, "前へ" %>
+      <%= link_to_next_page @posts, '次へ' %>
   </main>
 </div>

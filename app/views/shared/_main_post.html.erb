@@ -2,6 +2,8 @@
   <div class="main_post_wrap">
     <div class="post_lists">
       <%= render partial: "shared/post_index", locals: { resources: @posts } %>
+      <%= link_to_prev_page @posts, "前へ" %>
+      <%= link_to_next_page @posts, '次へ' %>
     </div>
   </div>
 </main>
