@@ -61,13 +61,13 @@
 @media screen and (max-width: 1200px) {
   .post_lists {
     grid-template-columns: 1fr 1fr;
-    row-gap: 30px;
+    row-gap: 10px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .post_lists {
     grid-template-columns: 1fr;
-    row-gap: 30px;
+    row-gap: 10px;
   }
 }
