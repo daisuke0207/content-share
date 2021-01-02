@@ -3,13 +3,12 @@
 class PostsController < ApplicationController
   before_action :move_to_session, only: %i[new edit]
   before_action :set_post, only: %i[show edit update destroy]
+  before_action :set_publish_posts, only: %i[index show]
 
   def index
-    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC').page(params[:page]).per(30)
   end
 
   def show
-    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC').page(params[:page]).per(15)
     @comment = Comment.new
   end
 
@@ -58,5 +57,9 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def set_publish_posts
+    @posts = Post.includes(:user).where(is_publish: true).order('created_at DESC').page(params[:page]).per(24)
   end
 end
