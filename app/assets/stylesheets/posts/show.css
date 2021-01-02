@@ -39,7 +39,7 @@
 .comment_view_wrap {
   display: grid;
   grid-template-columns: min(700px, 70vw);
-  grid-template-rows: 50px 500px;
+  grid-template-rows: 50px max(500px 0);
 }
 
 .comment_form {

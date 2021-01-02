@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
+  before_action :set_post, only: %i[create]
+
   def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.new(comment_params)
-    if @comment.save
+    if @post.comments.create(comment_params)
       redirect_to post_path(@post)
     else
       @comments = @post.connects.includes(:user)
@@ -13,13 +13,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:post_id])
     comment = Comment.find(params[:id])
     if comment.destroy
-      redirect_to post_path(post)
+      redirect_to post_path(comment.post)
     else
-      @post = post
-      render "/posts/#{@post.id}"
+      render "/posts/#{comment.post}"
     end
   end
 
@@ -27,5 +25,9 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:body).merge(user_id: current_user.id, post_id: params[:post_id])
+  end
+
+  def set_post
+    @post = Post.find(params[:post_id])
   end
 end

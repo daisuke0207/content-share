@@ -12,9 +12,11 @@
         </ul>
         <div class="comment_view_wrap">
           <%# コメント投稿フォーム %>
-          <%= form_with model: [@post, @comment], class:"comment_form" , local: true do |f| %>
-            <%= f.text_area :body, class:"comment_area", required: true %>
-            <%= f.submit "コメント", class:"comment_submit" %>
+          <% if user_signed_in? %>
+            <%= form_with model: [@post, @comment], class:"comment_form" , local: true do |f| %>
+              <%= f.text_area :body, class:"comment_area", required: true %>
+              <%= f.submit "コメント", class:"comment_submit" %>
+            <% end %>
           <% end %>
 
           <%# コメント一覧表示 %>
