@@ -5,8 +5,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
   before_action :set_publish_posts, only: %i[index show]
 
-  def index
-  end
+  def index; end
 
   def show
     @comment = Comment.new
